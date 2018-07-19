@@ -9,7 +9,6 @@ import com.wkfsfrc.ce.Exception.InvalidStatementException;
 import com.wkfsfrc.ce.FileHandler.FileHandler;
 public class MainApp {
 
-	
 	static private String inputFile;
 	static private String configFile;
 	public static void main(String[] args) {
