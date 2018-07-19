@@ -7,11 +7,12 @@
 	<artifactId>Parent</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	<modules>
-		<module>Core</module>
-		<module>Operation</module>
+	<modules>	
 		<module>FileHandler</module>
 		<module>Exception</module>
+		<module>CalcEngine-API</module>
+		<module>CalcEngine-Impl</module>
+		<module>AppCore</module>
 	</modules>
 	<dependencies><!-- https://mvnrepository.com/artifact/junit/junit -->
 		<dependency>
