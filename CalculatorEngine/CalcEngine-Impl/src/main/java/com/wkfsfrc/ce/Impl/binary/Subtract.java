@@ -1,6 +1,7 @@
 package com.wkfsfrc.ce.Impl.binary;
 
 import com.wkfsfrc.ce.API.Binary;
+
 public class Subtract extends Binary{
 
 	@Override

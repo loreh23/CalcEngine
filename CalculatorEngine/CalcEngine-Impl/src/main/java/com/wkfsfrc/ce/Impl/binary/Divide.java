@@ -27,6 +27,9 @@ public class Divide extends Binary{
 		this.setValues();
 		return this.getFirstValue() + " / " + this.getSecondValue() + " = " + this.getResult();
 	}
+	/** 
+	 * verifica daca lista de operanzi.length == 2 si al doilea operand nu este 0
+	 */
 	public void wrongNumberOfParameters() throws InvalidStatementException {
 		super.wrongNumberOfParameters();
 		this.setValues();

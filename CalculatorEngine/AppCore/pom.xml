@@ -26,11 +26,6 @@
 		</dependency>
 		<dependency>
 			<groupId>Parent</groupId>
-			<artifactId>Exception</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>Parent</groupId>
 			<artifactId>CalcEngine-API</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
@@ -39,10 +34,29 @@
 			<artifactId>CalcEngine-Impl</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-		<dependency>
-			<groupId>Parent</groupId>
-			<artifactId>FileHandler</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
 	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>com.wkfsfrc.ce.AppCore.MainApp</mainClass>
+						</manifest>
+					</archive>
+					<descriptorRefs>jar-with-dependencies</descriptorRefs>
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-assembly</id> <!-- this is used for inheritance merges -->
+						<phase>package</phase> <!-- bind to the packaging phase -->
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 </project>
