@@ -10,10 +10,9 @@ public abstract class MathOperation {
 	
 	public abstract double getResult();
 	/**checks to see if possibleOperator matches a certain operator (eg. if(pO.equals("inv"))
-	 * it returns true if it does, false if it does not 
-	 * verifica daca 
-	 * @param possibleOperator este egal cu un anumit operator (ex. if(pO.equals("inv"))
-	 * @return true daca este egal, false daca nu este
+	 * it returns true if it does, false if it does not  
+	 * @param possibleOperator 
+	 * @return 
 	 */
 	public abstract boolean checkOperator(String possibleOperator);
 	/**
@@ -22,8 +21,7 @@ public abstract class MathOperation {
 	 */
 	public abstract String toString();
 	/**
-	 * this method will be implemented with by classes, with their proper requirements
-	 * metoda care este implementeaza cerintele fiecarei operatii
+	 * this method will be implemented by classes, with their proper requirements
 	 * @throws InvalidStatementException
 	 */
 	public abstract void wrongNumberOfParameters() throws InvalidStatementException;

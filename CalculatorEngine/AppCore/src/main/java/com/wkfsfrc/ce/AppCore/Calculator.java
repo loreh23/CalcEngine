@@ -55,10 +55,8 @@ public class Calculator {
 
 	/**
 	 * as a parameter it recives class Properties, it turns them into instances and
-	 * adds them to MathOperationsList primeste ca parametru proprietati
-	 * 
-	 * @param classes , pe care le transforma in noi instante de clase folosind
-	 *                createOperator si le adauga la MathOperationsList
+	 * adds them to MathOperationsList 
+	 * @param classes 
 	 */
 	public void setMathOperationsList(Properties classes) {
 		mathOperationsList = new ArrayList<MathOperation>();
@@ -69,10 +67,9 @@ public class Calculator {
 
 	/**
 	 * it gets the fully qualified name of a class and returns a new instance of
-	 * that class primeste
-	 * 
-	 * @param className care este numele intreg al clasei, incluzand pachetul si
-	 * @return o noua instanta a clasei ( echivalent cu ex. new Add())
+	 * that class
+	 * @param className 
+	 * @return 
 	 */
 	private MathOperation createOperator(String className) {
 		Class<?> operatorClass;
@@ -95,11 +92,9 @@ public class Calculator {
 	/**
 	 * iterates through the operations from MathOperationsList and checks to see if
 	 * the operator matches an operator from a concrete operation class and it
-	 * returns that operation itereaza prin instantele de operatii din
-	 * MathOperationsList si verifica daca
-	 * 
-	 * @param operator este egal cu un operatorul dintr-o clasa si
-	 * @return acea operatie
+	 * returns that operation 
+	 * @param operator
+	 * @return 
 	 * @throws InvalidStatementException
 	 */
 	private MathOperation getMathOperation(String operator) throws InvalidStatementException {

@@ -4,10 +4,6 @@ import com.wkfsfrc.ce.API.Unary;
 
 import com.wkfsfrc.ce.Exception.InvalidStatementException;
 
-/**
- * implementarea clasei Inverter
- *
- */
 
 public class Inverter extends Unary{
 	
@@ -32,9 +28,7 @@ public class Inverter extends Unary{
 		return "inv("+this.getOperand()+") = "+this.getResult();
 	}
 	
-	/**
-	 * verifica daca lista de operanzi contine doar 1 operand si daca acesta nu este 0
-	 */
+	
 	public void wrongNumberOfParameters() throws InvalidStatementException {
 		super.wrongNumberOfParameters();
 		this.setOperand();
