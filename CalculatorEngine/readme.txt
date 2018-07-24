@@ -16,7 +16,8 @@ How to Run the app:
  in command line: java -jar AppCore-0.0.1-SNAPSHOT-jar-with-dependencies.jar input.txt configFile.properties
  
 How to extend the app:
- 1.Write the implementation of the classes that will extend the application 
+ 1.Write the implementation of the classes that will extend the application (for this, you need to use CalcEngine-API as a dependency and you need to extend one of the following classes:
+ MathOperation,Unary(for operations with 1 operand), Binary(for operations with 2 operands) or Aggregation( for operations where the number of operands vary from 1 to many)) 
  2.Package them in a jar
  3.Change input.txt with the desired operation 
  4.Add in configFile the classes (eg. Max=com.extension.Max)
