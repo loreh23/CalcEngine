@@ -1,4 +1,5 @@
-Calculator Engine is an app that calculates the operations from input file, with the configurations from configFile and it writes the results to a file named output.txt.
+Calculator Engine is an app that calculates the operations from input file,
+with the configurations from configFile and it writes the results to a file named output.txt.
 
 Requirements:  
  To run the app: at least jre 1.8
