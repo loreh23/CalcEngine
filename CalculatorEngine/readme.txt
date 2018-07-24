@@ -17,8 +17,9 @@ How to Run the app:
  
 How to extend the app:
  1.Write the implementation of the classes that will extend the application 
- 2.Package them in a jar 
- 3.Add in configFile the classes (eg. Max=com.extension.Max)
- 4.Run the following command: 
+ 2.Package them in a jar
+ 3.Change input.txt with the desired operation 
+ 4.Add in configFile the classes (eg. Max=com.extension.Max)
+ 5.Run the following command: 
   java -cp AppCore-0.0.1-SNAPSHOT-jar-with-dependencies.jar;ExtensionJarName.jar com.wkfsfrc.ce.AppCore.MainApp input.txt configFile.properties
   (com.wkfsfrc.ce.AppCore.MainApp -the main class of the application)
