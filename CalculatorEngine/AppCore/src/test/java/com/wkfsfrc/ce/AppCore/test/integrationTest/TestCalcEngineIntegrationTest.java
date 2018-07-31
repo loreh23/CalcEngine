@@ -16,7 +16,7 @@ import com.wkfsfrc.ce.AppCore.MainApp;
 @RunWith(JUnit4.class)
 public class TestCalcEngineIntegrationTest {
 
-	private String[] files = {".\\input.txt",".\\configFile.properties"};
+	private String[] files = {".\\input.txt",".\\output.txt",".\\configFile.properties"};
 	private File expectedOutputFile = new File(".\\output_expected.txt");
 	private File outputFile=new File(".\\output.txt");
 	

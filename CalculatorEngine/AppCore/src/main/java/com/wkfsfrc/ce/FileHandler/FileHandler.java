@@ -15,10 +15,11 @@ public class FileHandler {
 	FileWriter fileWriter = null;
 	File file = null;
 	String path = null;
-	File outputFile = null;
+	String outputFile = null;
 
-	public FileHandler(String file) {
-		this.fileName=file;
+	public FileHandler(String inputFile,String outputFile) {
+		this.fileName=inputFile;
+		this.outputFile=outputFile;
 	}
 	
 	public void createOutputFileWriter() {
@@ -29,19 +30,6 @@ public class FileHandler {
 			e1.printStackTrace();
 		}
 		
-	}
-	public void createOutputFileIfNotExists() {
-		this.setFile(new File(this.getFileName())); 
-		this.setPath(this.file.getAbsolutePath().substring(0, file.getAbsolutePath().lastIndexOf("\\") + 1)); 
-		 this.setOutputFile(new File(this.path + "\\output.txt"));
-		 //creates the outputfile if it does not exist
-	 if (!this.getOutputFile().exists()) {
-	     try {
-	    	 this.getOutputFile().createNewFile();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	  }
 	}
 
 	BufferedReader createBufferedReader(File file) {
@@ -60,13 +48,14 @@ public class FileHandler {
 		this.file = f;
 	}
 	
-	public File getOutputFile() {
+	public String getOutputFile() {
 		return outputFile;
 	}
 
-	public void setOutputFile(File outputFile) {
+	public void setOutputFile(String outputFile) {
 		this.outputFile = outputFile;
 	}
+	
 
 	public BufferedReader getBufferedReader() {
 		return bufferedReader;

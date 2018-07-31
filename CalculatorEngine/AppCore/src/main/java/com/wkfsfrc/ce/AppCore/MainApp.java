@@ -12,10 +12,12 @@ public class MainApp {
 
 	static private String inputFile;
 	static private String configFile;
+	static private String outputFile;
 
 	public static void main(String[] args) {
 		inputFile = args[0];
-		configFile = args[1];
+		outputFile = args[1];
+		configFile = args[2];
 		Calculator calculator = new Calculator();
 		String lineContent;
 
@@ -29,8 +31,7 @@ public class MainApp {
 		}
 		calculator.setMathOperationsList(classes);
 
-		FileHandler fileHandler = new FileHandler(inputFile);
-		fileHandler.createOutputFileIfNotExists();
+		FileHandler fileHandler = new FileHandler(inputFile, outputFile);
 		fileHandler.createOutputFileWriter();
 		fileHandler.setBufferedReader();
 		try {
